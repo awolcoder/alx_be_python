@@ -1,6 +1,6 @@
 def perform_operation(num1, num2, operation):
     """
-    Perform basic arithmatic operations.
+    Perform basic arithmetic operations.
 
     Parameters:
         num1 (float): First number
@@ -23,6 +23,6 @@ def perform_operation(num1, num2, operation):
     else:
         return "Error: Invalid operation"
     
-    
+
     
 
