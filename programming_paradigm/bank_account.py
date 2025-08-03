@@ -29,11 +29,11 @@ class BankAccount:
             else:
                 return False # Insufficient funds
         else:
-            print("Withdraw amount must be positive.")  # Validation check
+            print("Withdrawal amount must be positive.")  # Validation check
             return False
         
     def display_balance(self):
         """
-        Display the current account balance in a user-friendly format.
+        Display the current account balance in a user-friendly format with two decimal places.
         """
-        print(f"Current Balance: ${self.__account_balance}")
+        print(f"Current Balance: ${self.__account_balance:.2f}")
