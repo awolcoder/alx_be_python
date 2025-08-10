@@ -1,10 +1,6 @@
 class Book:
     """
     Represents a generic book with a title and an author.
-
-    Attributes:
-        title (str): The title of the book.
-        author (str): The author of the book.
     """
 
     def __init__(self, title, author):
@@ -18,13 +14,16 @@ class Book:
         self.title = title
         self.author = author
 
+    def __str__(self):
+        """
+        Returns the string representation of a Book.
+        """
+        return f"Book: {self.title} by {self.author}"
+
 
 class EBook(Book):
     """
     Represents an electronic book, inheriting from Book.
-
-    Attributes:
-        file_size (int): The size of the eBook file in KB.
     """
 
     def __init__(self, title, author, file_size):
@@ -39,13 +38,16 @@ class EBook(Book):
         super().__init__(title, author)
         self.file_size = file_size
 
+    def __str__(self):
+        """
+        Returns the string representation of an EBook.
+        """
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
+
 
 class PrintBook(Book):
     """
     Represents a printed book, inheriting from Book.
-
-    Attributes:
-        page_count (int): The number of pages in the printed book.
     """
 
     def __init__(self, title, author, page_count):
@@ -60,13 +62,16 @@ class PrintBook(Book):
         super().__init__(title, author)
         self.page_count = page_count
 
+    def __str__(self):
+        """
+        Returns the string representation of a PrintBook.
+        """
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
+
 
 class Library:
     """
     Represents a library containing a collection of books.
-
-    Attributes:
-        books (list): A list storing Book, EBook, and PrintBook instances.
     """
 
     def __init__(self):
@@ -86,12 +91,7 @@ class Library:
 
     def list_books(self):
         """
-        Lists all books in the library with their details.
+        Lists all books in the library by printing their string representations.
         """
         for book in self.books:
-            if isinstance(book, EBook):
-                print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
-            elif isinstance(book, PrintBook):
-                print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
-            else:
-                print(f"Book: {book.title} by {book.author}")
+            print(book)
