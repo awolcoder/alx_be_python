@@ -1,5 +1,3 @@
-# library_system.py
-
 class Book:
     """
     Represents a generic book with a title and an author.
