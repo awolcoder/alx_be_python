@@ -10,7 +10,7 @@ class Book:
         year (int): The publication year of the book.
     """
 
-    def __init__(self, title: str, author: str, year: int) -> None:
+    def __init__(self, title, author, year):
         """
         Constructor to initialize a Book instance.
         
@@ -19,17 +19,17 @@ class Book:
             author (str): The author of the book.
             year (int): The publication year of the book.
         """
-        self.title: str = title
-        self.author: str = author
-        self.year: int = year
+        self.title = title
+        self.author = author
+        self.year = year
 
-    def __del__(self) -> None:
+    def __del__(self):
         """
         Destructor that prints a message when the object is deleted.
         """
         print(f"Deleting {self.title}")
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         Returns the informal string representation of the book.
 
@@ -38,7 +38,7 @@ class Book:
         """
         return f"{self.title} by {self.author}, published in {self.year}"
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         """
         Returns the official string representation of the book
         that can be used to recreate the object.
