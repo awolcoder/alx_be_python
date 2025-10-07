@@ -1,0 +1,6 @@
+[submodule "Alx_DjangoLearnLab"]
+	path = Alx_DjangoLearnLab
+	url = https://github.com/awolcoder/Alx_DjangoLearnLab.git
+[submodule "Intro_to_DB"]
+	path = Intro_to_DB
+	url = https://github.com/awolcoder/Intro_to_DB.git
